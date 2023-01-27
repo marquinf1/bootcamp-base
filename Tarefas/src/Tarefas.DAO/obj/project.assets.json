@@ -128,19 +128,19 @@
     ]
   },
   "packageFolders": {
-    "/home/decom/.nuget/packages/": {}
+    "/home/marcosferraz/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/decom/AtualBootcamp/bootcamp-base/Tarefas/src/Tarefas.DAO/Tarefas.DAO.csproj",
+      "projectUniqueName": "/home/marcosferraz/Área de Trabalho/bootcamp/bootcamp-base/Tarefas/src/Tarefas.DAO/Tarefas.DAO.csproj",
       "projectName": "Tarefas.DAO",
-      "projectPath": "/home/decom/AtualBootcamp/bootcamp-base/Tarefas/src/Tarefas.DAO/Tarefas.DAO.csproj",
-      "packagesPath": "/home/decom/.nuget/packages/",
-      "outputPath": "/home/decom/AtualBootcamp/bootcamp-base/Tarefas/src/Tarefas.DAO/obj/",
+      "projectPath": "/home/marcosferraz/Área de Trabalho/bootcamp/bootcamp-base/Tarefas/src/Tarefas.DAO/Tarefas.DAO.csproj",
+      "packagesPath": "/home/marcosferraz/.nuget/packages/",
+      "outputPath": "/home/marcosferraz/Área de Trabalho/bootcamp/bootcamp-base/Tarefas/src/Tarefas.DAO/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/decom/.nuget/NuGet/NuGet.Config"
+        "/home/marcosferraz/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -152,8 +152,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/home/decom/AtualBootcamp/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj": {
-              "projectPath": "/home/decom/AtualBootcamp/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj"
+            "/home/marcosferraz/Área de Trabalho/bootcamp/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj": {
+              "projectPath": "/home/marcosferraz/Área de Trabalho/bootcamp/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj"
             }
           }
         }
@@ -193,7 +193,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/decom/.dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/marcosferraz/.dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }

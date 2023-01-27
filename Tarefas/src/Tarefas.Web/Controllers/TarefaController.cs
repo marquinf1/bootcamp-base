@@ -5,12 +5,12 @@ using Tarefas.DAO;
 
 namespace Tarefas.Web.Controllers
 {
-   
+
     public class TarefaController : Controller
     {
         public List<Tarefa> listaDeTarefas { get; set; }
 
-
+        private TarefaDAO tarefaDAO;
 
         public TarefaController()
         {
@@ -20,8 +20,10 @@ namespace Tarefas.Web.Controllers
                 new Tarefa() { Id = 2, Titulo = "Arrumar a cama" },
                 new Tarefa() { Id = 3, Titulo = "Por o lixo para fora", Descricao = "somente às terças, quintas e sábados" }
             };
+
+            tarefaDAO = new TarefaDAO();
         }
-        
+
         public IActionResult Details(int id)
         {
             var tarefaDAO = new TarefaDAO();
@@ -34,12 +36,12 @@ namespace Tarefas.Web.Controllers
                 Descricao = tarefaDTO.Descricao,
                 Concluida = tarefaDTO.Concluida
             };
-            
+
             return View(tarefa);
         }
 
         public IActionResult Index()
-        {        
+        {
             var tarefaDAO = new TarefaDAO();
             var listaDeTarefasDTO = tarefaDAO.Consultar();
 
@@ -54,7 +56,7 @@ namespace Tarefas.Web.Controllers
                     Descricao = tarefaDTO.Descricao,
                     Concluida = tarefaDTO.Concluida
                 });
-            }    
+            }
             return View(listaDeTarefas);
         }
 
@@ -66,15 +68,20 @@ namespace Tarefas.Web.Controllers
         [HttpPost]
         public IActionResult Create(Tarefa tarefa)
         {
-            var tarefaDTO = new TarefaDTO 
+            var tarefaDTO = new TarefaDTO
             {
                 Titulo = tarefa.Titulo,
                 Descricao = tarefa.Descricao,
                 Concluida = tarefa.Concluida
             };
 
-            var tarefaDAO = new TarefaDAO();
+            //var tarefaDAO = new TarefaDAO();
             tarefaDAO.Criar(tarefaDTO);
+
+            if(!ModelState.IsValid)
+            {
+                return View();
+            }
 
             return RedirectToAction("Index");
         }
@@ -82,7 +89,7 @@ namespace Tarefas.Web.Controllers
         [HttpPost]
         public IActionResult Update(Tarefa tarefa)
         {
-            var tarefaDTO = new TarefaDTO 
+            var tarefaDTO = new TarefaDTO
             {
                 Id = tarefa.Id,
                 Titulo = tarefa.Titulo,
@@ -90,8 +97,13 @@ namespace Tarefas.Web.Controllers
                 Concluida = tarefa.Concluida
             };
 
-            var tarefaDAO = new TarefaDAO();
+            //var tarefaDAO = new TarefaDAO();
             tarefaDAO.Atualizar(tarefaDTO);
+
+            if(!ModelState.IsValid)
+            {
+                return View();
+            }
 
             return RedirectToAction("Index");
         }
@@ -114,7 +126,7 @@ namespace Tarefas.Web.Controllers
 
         public IActionResult Delete(int id)
         {
-            var tarefaDAO = new TarefaDAO();
+            //var tarefaDAO = new TarefaDAO();
             tarefaDAO.Excluir(id);
 
             return RedirectToAction("Index");
