@@ -10,20 +10,33 @@
     }
 }
 
-<form asp-action="Create">
+<form class="row g-3" asp-action="Create">
+
+    <h3>
+        Criar tarefa
+    </h3>
     
-    
+    <div class="col-12">
     <div class="form-group">
         <label asp-for="Titulo">@Html.DisplayNameFor(model => model.Titulo)</label>
         <input asp-for="Titulo" class="form-control"/>
     </div>
+    </div>
 
+    <div class="col-12">
     <div class="form-group">
         <label asp-for="Descricao">@Html.DisplayNameFor(model => model.Descricao)</label>
         <input asp-for="Descricao" class="form-control"/>
     </div>
+    </div>
     @Html.ValidationSummary()
-        
+    
+    <div class="col-12">
+        <div class="form-group">
+            <input type="checkbox" asp-for="Concluida" />
+            <label asp-for="Concluida">@Html.DisplayNameFor(model => model.Concluida)</label>
+        </div>
+    </div>
     <input type="submit" class="btn btn-primary" />
 
 </form>
