@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "/home/marcosferraz/.nuget/packages/": {}
+    "/home/decom/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/marcosferraz/Área de Trabalho/bootcamp/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj",
+      "projectUniqueName": "/home/decom/AtualBootcamp/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj",
       "projectName": "Tarefas.DTO",
-      "projectPath": "/home/marcosferraz/Área de Trabalho/bootcamp/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj",
-      "packagesPath": "/home/marcosferraz/.nuget/packages/",
-      "outputPath": "/home/marcosferraz/Área de Trabalho/bootcamp/bootcamp-base/Tarefas/src/Tarefas.DTO/obj/",
+      "projectPath": "/home/decom/AtualBootcamp/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj",
+      "packagesPath": "/home/decom/.nuget/packages/",
+      "outputPath": "/home/decom/AtualBootcamp/bootcamp-base/Tarefas/src/Tarefas.DTO/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/marcosferraz/.nuget/NuGet/NuGet.Config"
+        "/home/decom/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/marcosferraz/.dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/decom/.dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }

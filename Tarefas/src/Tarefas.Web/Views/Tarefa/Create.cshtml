@@ -1,19 +1,29 @@
-@model Tarefas.Web.Models.Tarefa
+@model Tarefas.Web.Models.TarefaViewModel
+
+@section Scripts
+{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
 
 <form asp-action="Create">
-    <asp-validation-summary>
-
-    <div class="form-group" asp-validation-for>
+    
+    
+    <div class="form-group">
         <label asp-for="Titulo">@Html.DisplayNameFor(model => model.Titulo)</label>
         <input asp-for="Titulo" class="form-control"/>
     </div>
 
-    <div class="form-group" asp-validation-for>
+    <div class="form-group">
         <label asp-for="Descricao">@Html.DisplayNameFor(model => model.Descricao)</label>
         <input asp-for="Descricao" class="form-control"/>
     </div>
+    @Html.ValidationSummary()
         
     <input type="submit" class="btn btn-primary" />
 
-    </asp-validation-summary>
 </form>
